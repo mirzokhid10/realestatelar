@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('property', function (Blueprint $table) {
+        Schema::create('agent', function (Blueprint $table) {
             $table->id();
             $table->text("title");
             $table->smallInteger("price");
@@ -19,6 +19,7 @@ return new class extends Migration
             $table->smallInteger("bed");
             $table->smallInteger("bath");
             $table->text("street");
+            $table->string("photo")->nullable();
             $table->timestamps();
         });
     }

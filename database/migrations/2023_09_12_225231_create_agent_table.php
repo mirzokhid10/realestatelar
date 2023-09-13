@@ -20,7 +20,7 @@ return new class extends Migration
             $table->mediumText("facebook");
             $table->mediumText("twitter");
             $table->mediumText("instagram");
-            $table->string("photo");
+            $table->string("photo")->nullable();
             $table->mediumText("address");
             $table->text("bio");
             $table->timestamps();
