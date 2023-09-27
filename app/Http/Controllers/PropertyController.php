@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -11,7 +12,8 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        return view("property.index");
+        $properties = Property::all();
+        return view("properties.index")->with("property", $properties);
     }
 
     /**
@@ -33,9 +35,12 @@ class PropertyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Property $property)
     {
-        //
+        return view("properties.show")->with([
+            "property" => $property,
+            "recent_properties" => Property::latest()->get()->except($property->id)->take(4)
+        ]);
     }
 
     /**

@@ -17,16 +17,16 @@
 
 /*** Spinner ***/
 #spinner {
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+    z-index: 0;
 }
 
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
 }
 
 
@@ -149,7 +149,7 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
-        
+
     }
 
     .navbar .nav-item:hover .dropdown-menu {
@@ -438,3 +438,62 @@
     padding-right: 0;
     border-right: none;
 }
+
+
+
+/* new  */
+
+
+/* .property-detailed__overview {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+} */
+
+.property-detailed__overview .property-detailed__overview-parameters{
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    color: var(--headings-color);
+    display: block;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+.carousel-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+  /* Custom CSS for the carousel control buttons */
+  .carousel-control-prev,
+  .carousel-control-next {
+    border-radius: 50%; /* Make the buttons circular */
+    width: 50px; /* Adjust the width and height as needed */
+    height: 50px;
+    top: 45%;
+
+    margin: 7px 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 40px;
+    font-size: 20px;
+    transition: .5s;
+  }
+
+  /* Custom CSS for the carousel control icons (chevrons) */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #fff; /* Change the icon color */
+    border-radius: 50%; /* Make the icons circular */
+    width: 30px; /* Adjust the width and height as needed */
+    height: 30px;
+    line-height: 30px; /* Center the icon vertically */
+  }

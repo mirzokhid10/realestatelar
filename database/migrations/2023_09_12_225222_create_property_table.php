@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('agent', function (Blueprint $table) {
+        Schema::create('property', function (Blueprint $table) {
             $table->id();
             $table->text("title");
             $table->smallInteger("price");

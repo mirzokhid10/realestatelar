@@ -21,5 +21,5 @@ Route::get('/about', [PageController::class, "about"])->name("about");
 Route::get('/contact', [PageController::class, "contact"])->name("contact");
 Route::get('/terminal', [PageController::class, "terminal"])->name("terminal");
 
-Route::resource("property", PropertyController::class);
+Route::resource("properties", PropertyController::class);
 Route::resource("agents", AgentController::class);
